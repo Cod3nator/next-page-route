@@ -5,8 +5,6 @@ import { NotificationContext} from "./NotificationContext";
 
 
 const Contact = () => {
-  
-  // const {setSuccess}=useContext(NotificationContext);
 
   function sendData(name, email, message) {
     console.log(name + " " + email + " " + message);
@@ -27,11 +25,7 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // setSuccess((prevState) => ({
-        //   ...prevState,
-        //   success: data.success,
-        //   message: data.message
-        // }));
+   
         
         console.log(data);
         handleApiResponse(data);
@@ -80,9 +74,6 @@ const Contact = () => {
   function handleInput(e) {
     console.log(e.target.value);
   }
-  // const handleInput = (e) => {
-  //   console.log(e.target.value);
-  // };
 
   return (
     <section className="text-gray-600 body-font relative" id="contact">
